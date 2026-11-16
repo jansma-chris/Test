@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>hello</title>
+  <style>
+    :root {
+      --primary: #f34e4e;
+      --secondary: #fff6ea;
+      --black: #282828;
+      --space-xs: 5px;
+      --space-l: 25px;
+      --space-xl: 40px;
+      --space-xxl: 65px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--secondary);
+      color: var(--black);
+      font-family: "DM Sans", system-ui, sans-serif;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+      align-items: center;
+      gap: var(--space-xl);
+      width: min(100%, 1200px);
+      min-height: 100svh;
+      margin-inline: auto;
+      padding: var(--space-xxl);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 48px;
+      line-height: 60px;
+      font-weight: 700;
+    }
+
+    h1::before {
+      content: "";
+      display: block;
+      width: var(--space-xl);
+      height: var(--space-xs);
+      margin-bottom: var(--space-l);
+      background: var(--primary);
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 700px) {
+      main {
+        grid-template-columns: minmax(0, 1fr);
+        align-content: center;
+        gap: var(--space-l);
+        padding: var(--space-l);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>hello</h1>
+    <!-- Download the original performance photo from the project's Google Drive as performance.jpg. -->
+    <img src="performance.jpg" width="2048" height="1366"
+      alt="A mandolin player performing under stage lights">
+  </main>
+</body>
+</html>
